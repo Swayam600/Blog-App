@@ -1,0 +1,13 @@
+.post-block {
+    background: var(--main);
+    margin: 100px 20vw;
+    padding: 10px 40px;
+    box-shadow: 5px 5px 5px var(--smain);
+
+}
+.post-block h2 {
+    font-size: 40px;
+    margin-bottom: 50px;
+    border-bottom: 3px solid black;
+    width: 45%;
+}

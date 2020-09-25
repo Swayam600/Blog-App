@@ -1,0 +1,60 @@
+:root {
+    --main: whitesmoke;
+    --smain: lightgrey;
+    --ssmain: grey;
+}
+.content {
+    background-position: center center;
+    position: absolute;
+    top: 40%;
+    left: 35%;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    background: var(--main);
+    padding: 10px 40px;
+    width: 500px;
+    box-shadow: 5px 5px 3px var(--smain)
+}
+.content form h3 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+    border: none;
+    padding: 5px 20px;
+    /* transition: 0.5s */
+}
+
+form input, p {
+    height: 30px;
+    width: 300px;
+    margin: 20px auto;
+    float: left;
+    font-size: .9em;
+    border: none;
+    background: none;
+    border-bottom: 1px solid var(--ssmain);
+    font-weight: 500;
+    font-family: monospace;
+    outline: none;
+}
+form p {
+    margin-top: 5px auto;
+    border-bottom: none;
+}
+form button {
+    float: left;
+    margin: auto 35%;
+    height: 30px;
+    outline: none;
+    border: none;
+    background: none;
+    border-radius: 20px;
+    font-size: 20px;
+    font-family: monospace;
+    /* transition: .5s */
+}
+form button:hover {
+    box-shadow: inset 5px 5px 3px var(--smain)
+}

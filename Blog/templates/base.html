@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+  <link rel="stylesheet" href="{% static 'style/base.css' %}">
+  {% block link %}
+  {% endblock link %}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}
+  {% endblock title %}</title>
+</head>
+<body>
+  
+  <div class="nav-wrapper">
+    <div class="logo"><a href='#'>Logo</a></div>
+    <nav>
+      <ul>
+        <li><a href="/blog/home/">Home</a></li>
+        <li><a href="/blog/posts/">Blog</a></li>
+        <li><a href="/blog/query/">Make a Post</a></li>
+        <li><a href="#">Documentation</a></li>
+        <li><a href="#">About Us</a></li>
+      </ul>
+    </nav>
+    <div class="btn">
+    {% if user.is_authenticated %}
+    <span class="span-p" id='span'>Hi, {{ user.username }}</span>
+    <a href="/logout/">Logout</a>
+    {% else %}
+      <a href="/register/">Register</a>
+      <a href="/login/">Log in</a>
+    {% endif %}
+    </div>
+  </div>
+{% block content %}
+{% endblock content %}
+</body>
+</html>
+
+
+
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Est eos facere animi itaque sapiente, illum, quibusdam incidunt natus impedit neque ipsa maiores, assumenda consectetur corrupti doloremque consequuntur. Quasi, amet fugit eius iste voluptatem veniam cumque commodi error ex quia ad explicabo? Mollitia a explicabo harum obcaecati distinctio ipsam debitis laudantium necessitatibus aspernatur voluptates libero minus odio corporis consequuntur, voluptatum inventore, quia unde ad placeat, veritatis qui culpa tempora assumenda! Ut amet saepe, commodi labore expedita reiciendis beatae ipsum cum temporibus atque illum corrupti tenetur quas similique cupiditate, nemo earum porro, explicabo necessitatibus. Nam commodi reiciendis saepe, sed obcaecati dolor consequatur? -->

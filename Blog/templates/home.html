@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block link %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style/home.css' %}">
+{% endblock link %}
+
+{% block title %}
+  Home Page
+{% endblock title %}
+
+{% block content %}
+{% if message %}
+<p style="text-align: center; background: lightpink; padding: 5px 10px;">{{ message }}</p>
+{% endif %}
+  <div class="content">
+      <div class="first con">
+          <h2>Blog.mogo</h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, placeat! Tenetur aut possimus magnam nobis nesciunt assumenda totam architecto, id, fuga quibusdam ut molestiae! Voluptas iusto cum doloremque officiis? Aut.</p>
+      </div>
+      <div class="second con">
+          <h2>Post</h2>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga, doloribus. Aspernatur tempora beatae, provident sequi a exercitationem asperiores facere aperiam commodi ad hic repellat ex possimus totam velit alias magni! Post your solution over here. See our Post over <a href="#">here</a>.</p>
+      </div>
+      <div class="third con">
+          <h2>Query</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero, veritatis nesciunt asperiores aliquam cumque eveniet in fugit? Fugiat fugit nostrum doloribus suscipit omnis dolorum vero pariatur temporibus dignissimos debitis. Delectus! Can't find solution to your problem? Search over <a href="#">here</a>.</p>
+      </div>
+  </div>
+{% endblock content %}
+

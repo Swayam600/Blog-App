@@ -1,0 +1,29 @@
+:root {
+    --main: whitesmoke;
+    --smain: lightgrey;
+    --ssmain: grey;
+}
+.content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-top: 100px;
+    color: black;
+    margin: 100px 50px;
+    grid-gap: 10px 20px;
+}
+.con {
+    background: var(--main);
+    border-radius: 10px;
+    padding: 10px 40px;
+    width: 300px;
+    height: 500px;
+    box-shadow: 5px 5px 3px var(--smain)
+}
+.con h2 {
+    margin-bottom: 30px;
+}
+
+a {
+    border-bottom: 2px dashed var(--ssmain);
+    color: var(--ssmain)
+}

@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}
+  User Registration
+{% endblock title %}
+
+{% block link %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'style/user-register.css' %}">
+{% endblock link %}
+
+{% block content %}
+<div class="content">
+<form action="/blog/home/" method="POST"> {% csrf_token %}
+  <h3>Join Today</h3>
+    <input type="text" name="username" id="username" placeholder="Username" autocomplete="off">
+    {% if message %}
+    <p>{{ message }}</p>    
+    {% endif %}
+    <input type="email" name="email" id="email" placeholder="Email" autocomplete="off">
+    <input type="password" name="password" id="password" placeholder="Password" autocomplete="off">
+    <button type="submit">Sign up</button>
+    <p>Have an account <a style="border-bottom: 2px dashed grey" href="/login/">Login here</a></p>
+
+</form>
+</div>
+{% endblock content %}

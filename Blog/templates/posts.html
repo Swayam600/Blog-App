@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block link %}
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'style/posts.css' %}">
+{% endblock link %}
+
+{% block title %}
+  Blog Posts
+{% endblock title %}
+
+{% block content %}
+  {% if posts %}
+  <div class="posts">
+    <ul>
+        {% for post in posts %}
+          <li><div class="post">
+              <h2>{{post.Title}}</h2>
+              <p>{{post.slug}} <a id='link' href="/blog/{{post.id}}/post">Read more</a></p>
+          </div></li>
+        {% endfor %}
+    </ul>
+    </div>
+  {% endif %}
+  <button class='btn' id='btnrm' onclick="showmore()">Read More</button>
+
+  {% if other %}
+  <div style="display: none;" id='hidden' class="content">
+    <ul>
+      {% for post in other %}
+        <li><div class="post">
+          <h2>{{post.Title}}</h2>
+          <p>{{post.slug}} <a id='link' href="/blog/{{post.id}}/post">Read more</a></p>
+      </div></li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+
+  <script>
+    function showmore() {
+        document.getElementById('hidden').style.display = 'block';
+    }
+  </script>
+{% endblock content %}
+
+<!-- Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo, ullam eligendi voluptates at aut excepturi sit quas, facere ex et sequi esse natus eius repellat. Vitae omnis consectetur expedita nihil. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quas nihil exercitationem asperiores eaque alias rerum quidem. Quos eaque a minus ab nulla voluptatem temporibus distinctio veritatis quidem quaerat? Delectus porro at blanditiis et quo laboriosam omnis quod, nihil quibusdam, eaque natus rem quis maxime necessitatibus, doloremque ab soluta iusto assumenda dolorem odit est? Doloremque qui facilis, cumque asperiores vitae fugit omnis nulla debitis aspernatur pariatur natus ipsam iure, tempora illum numquam, repellendus vero facere libero aut? Quasi alias minus fugit, perspiciatis voluptatem nemo libero id, repellendus, accusantium ipsam harum modi! A neque officia commodi voluptates tenetur. Sunt temporibus libero ullam consequuntur neque recusandae beatae voluptate numquam inventore suscipit commodi assumenda quae corporis eaque, aliquam cupiditate veritatis tempore unde cumque dignissimos perferendis earum voluptatibus! Deserunt praesentium nisi et voluptatum, earum consequuntur? Iste perferendis laborum ea veritatis commodi eius magnam facilis dicta, possimus atque officiis qui quisquam obcaecati sit, vero necessitatibus placeat ipsa cumque vitae dolore? Eaque doloribus officia necessitatibus dolorem. Possimus quos tempore consequuntur nesciunt optio earum odio blanditiis fuga omnis aspernatur, id maxime maiores perferendis incidunt nisi corporis. Eligendi labore eveniet adipisci repellendus sed aut, odit voluptatem distinctio nisi error numquam eos molestiae facilis omnis beatae, possimus assumenda, doloribus ratione. -->

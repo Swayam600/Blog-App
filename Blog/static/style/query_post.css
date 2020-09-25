@@ -1,0 +1,44 @@
+* {
+    font-family: monospace;
+}
+.form {
+    display: flex;
+    justify-content: center;
+    padding: 10px 40px;
+    background: var(--main);
+    margin: 100px 30vw;
+}
+.form form input {
+    height: 50px;
+    width: 80%;
+    margin: 15px auto;
+    font-size: 0.9em;
+    padding: auto 20px;
+    outline: none;
+    border: 2px solid var(--ssmain);
+    border-radius: 8px;
+}
+.form form textarea {
+    width: 700px;
+    font-size: 0.9em;
+    height: 400px;
+    padding: auto 20px;
+    border: 2px solid var(--ssmain);
+    border-radius: 8px;
+    outline: none;
+}
+.form form button {
+    margin-top: 20px;
+    outline: none;
+    border: 1px solid transparent;
+    background: var(--main);
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+}
+.form form button:hover {
+    box-shadow: inset 5px 5px 3px var(--smain);
+    border-color: var(--smain);
+
+}

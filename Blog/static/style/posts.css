@@ -1,0 +1,21 @@
+:root {
+    --main: whitesmoke;
+    --smain: lightgrey;
+    --ssmain: grey;
+}
+.posts ul li {
+    margin: auto 100px;
+    margin-top: 100px;
+    list-style: none;
+}
+.posts ul li .post {
+    background: var(--main);
+    box-shadow: 5px 5px 3px var(--smain)
+}
+.posts ul li .post {
+    padding: 10px 40px;
+}
+#link {
+    color: var(--ssmain);
+    border-bottom: 2px dashed var(--ssmain);
+}

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block link %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'style/query_post.css' %}">
+{% endblock link %}
+
+{% block title %}
+  Post Query
+{% endblock title %}
+
+{% block content %}
+{% if message %}
+  <p>{{ message }}</p>
+{% endif %}
+  <div class="form">
+    <form action="/blog/query/" method="POST"> {% csrf_token %}
+        <input type="text" name="username" id="username" placeholder="Username" required><br>
+        <input type="text" name='title' id='title' placeholder="Title" required><br>
+        <textarea name="content" id="content" cols="30" rows="10" placeholder="Description" required></textarea><br>
+        {% if user.is_authenticated %}
+        <button type="submit">Submit</button>
+        {% else %}
+        <a href="/register/"> Sign in first</a>
+        <button type="submit" disabled>Submit</button>
+        {% endif %}
+    </form>
+  </div>
+{% endblock content %}
